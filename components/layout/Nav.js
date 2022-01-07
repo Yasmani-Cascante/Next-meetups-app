@@ -12,7 +12,8 @@ const Nav = () => {
     nav.classList.toggle("hidden");
   }
   return (
-    <div className="px-5 sm:px-10 border-b-2 border-primary">
+    // <div className="px-5 sm:px-10 border-b-2 border-primary">
+    <div className="border-b-2 border-primary">
       <div className="container mx-auto">
         <nav
           id="site-menu"
@@ -20,8 +21,13 @@ const Nav = () => {
         >
           <div className="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center cursor-pointer">
             <Link href="/" passHref>
-              <Image className="h-8 w-auto sm:h-10" src={LogoSvg} alt="logo" />
+              <Image
+                className="h-8 sm:h-10"
+                src={LogoSvg}
+                alt="logo"
+              />
             </Link>
+            <div className="ml-auto">
             <button
               id="menuBtn"
               className="hamburger block sm:hidden focus:outline-none"
@@ -31,13 +37,17 @@ const Nav = () => {
               <span className="hamburger__top-bun text-black"></span>
               <span className="hamburger__bottom-bun"></span>
             </button>
+            </div>
+
           </div>
           <ul
             id="menu"
             className="duration-1000 divide-y divide-gray-200 mt-10 sm:mt-0 sm:divide-y-0 w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row sm:items-center h-full py-1 sm:py-0 sm:pb-0 hidden ml-auto"
           >
             <li className="font-semibold px-3 py-2 text-black hover:text-gray-900 uppercase">
-              <Link href="/" passHref>Home</Link>
+              <Link href="/" passHref>
+                Home
+              </Link>
             </li>
             <li className="font-semibold px-3 py-2 text-black hover:text-gray-900 uppercase">
               <Link href="/new-meetup">New Meetup</Link>

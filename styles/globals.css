@@ -19,7 +19,9 @@ a {
   box-sizing: border-box;
 }
 
-
+.container {
+  padding: 10px;
+}
 /* HAMBURGER MENU */
 
 .hamburger {

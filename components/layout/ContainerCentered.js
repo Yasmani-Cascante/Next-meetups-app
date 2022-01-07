@@ -1,6 +1,6 @@
 const Footer = ({ children }) => {
   return (
-    <div className="container flex justify-center items-center mx-auto min-h-[65vh]">
+    <div className="container flex justify-center items-center mx-auto min-h-[75vh]">
         {children}
     </div>
   );

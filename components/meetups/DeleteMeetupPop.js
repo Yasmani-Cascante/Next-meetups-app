@@ -3,14 +3,14 @@ import { Fragment } from "react";
 
 export default function Example({ meetupTitle, actionTrigger }) {
   return (
-    <div className="w-full max-w-md px-4">
+    <div className="w-full max-w-md">
       <Popover>
         {({ close }) => (
           <>
             <Popover.Button
               className={`
                 ${close ? "" : "text-opacity-90"}
-                className="flex text-left mt-10 items-center pl-0 justify-start cursor-pointer w-40 py-2 bg-transparent border-b-2 border-primary text-primary text-lg font-semibold transition-all hover:bg-secondary hover:text-white hover:pl-3`}
+                w-full flex text-left mt-10 items-center pl-0 justify-start cursor-pointer md:w-40 py-2 bg-transparent border-b-2 border-primary text-primary text-lg font-semibold transition-all hover:bg-secondary hover:text-white hover:pl-3`}
             >
               <span>Delete</span>
             </Popover.Button>

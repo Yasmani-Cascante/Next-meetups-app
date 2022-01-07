@@ -13,10 +13,10 @@ const Meetupmeetup = ({ meetup }) => {
   }
 
   return (
-    // <div className="transition-all shadow-[4px_4px_1px_rgba(0,0,0,0.6)]">
-    <div className="card-img-effect relative transition-all hover:bg-gray-50  mb-10 border-2 border-black overflow-hidden">
+    <div className="flex justify-center">
+    <div className="card-img-effect relative transition-all hover:bg-gray-50  mb-10 border-2 border-black overflow-hidden w-[320px] sm:w-[350px]">
       {/* <div class="absolute inset-1 bg-gray-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div> */}
-      <div className="relative bg-transparent border-3 border-black max-w-sm flex flex-col h-full">
+      <div className="relative bg-transparent border-3 border-black flex flex-col h-full w-full ">
         <div className="relative w-full h-[200px]">
           <Image
             src={meetup.image}
@@ -53,6 +53,7 @@ const Meetupmeetup = ({ meetup }) => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
