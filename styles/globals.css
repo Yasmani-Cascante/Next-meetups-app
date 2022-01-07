@@ -236,6 +236,6 @@ a {
   }
 }
 
-/* .card {
-  width: 640px;
-} */
+.logo {
+  max-width: 150px !important;
+}

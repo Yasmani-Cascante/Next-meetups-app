@@ -21,12 +21,15 @@ const Nav = () => {
         >
           <div className="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center cursor-pointer">
             <Link href="/" passHref>
+              <div className="logo">
               <Image
-                className="h-8 sm:h-10"
+                className="sm:h-10"
                 src={LogoSvg}
                 alt="logo"
               />
-            </Link>
+              </div>
+              </Link>
+
             <div className="ml-auto">
             <button
               id="menuBtn"
