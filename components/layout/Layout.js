@@ -1,7 +1,7 @@
 import Nav from "./Nav";
 import ContainerCentered from "./ContainerCentered";
 import Footer from "./Footer";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Router from "next/router";
 import Loader from "../../components/ui/Loading";
 
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       Router.events.off("routeChangeStart", loadingStart);
       Router.events.off("routeChangeComplete", loadingStop);
     };
-  }, [Router]);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">

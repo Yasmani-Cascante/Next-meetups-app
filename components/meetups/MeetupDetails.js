@@ -3,6 +3,7 @@ import router from "next/router";
 import DeleteMeetupPop from "./DeleteMeetupPop";
 import AlertMsg from "../ui/AlertCard"
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 
 const MeetupDetails = ({ data }) => {
   const [alert, setAlert] = useState(null)
@@ -35,11 +36,13 @@ function trigger () {
   return (
     <div className="flex flex-col items-center md:flex-row">
       { alert && <AlertMsg body={alert} actionTrigger={trigger} /> } 
-      <div className="h-80 w-full md:w-1/4">
-        <img
+      <div className="h-[500px] w-full md:w-1/4">
+        <Image
           src={data.image}
           alt={data.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-cover bg-center bg-no-repeat"
+          width={500}
+          height={500}
         />
       </div>
       <div className="md:ml-5 md:w-3/4 p-5">
@@ -54,7 +57,7 @@ function trigger () {
         actionTrigger={deleteHandler}
         />
 
-        <Link href="/">
+        <Link href="/" passHref>
           <span className="flex mt-10 items-center justify-end ml-auto cursor-pointer w-40 py-2 bg-transparent border-b-2 border-primary text-primary text-lg font-semibold transition-all hover:bg-secondary hover:text-white hover:pr-3 focus:border-4 focus:border-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"

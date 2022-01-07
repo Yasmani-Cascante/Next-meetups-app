@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 const MeetupItemEditable = ({ title, image, description, address, marker }) => {
 
@@ -9,11 +10,13 @@ let markStyle = {
     <div className="transition-all shadow-[4px_4px_1px_rgba(0,0,0,0.6)] border-2 border-black">
     
       <div className="relative bg-transparent border-3 border-black max-w-sm flex flex-col h-full overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
           className="transition duration-1000 w-full h-48 object-cover bg-center bg-no-repeat hover:scale-105 "
-        />
+          width={500}
+          height={200}
+       />
         <div className="p-5 flex flex-col">
           <h5 className="text-gray-900 font-bold text-2xl tracking-tight dark:text-white">
             <span 
